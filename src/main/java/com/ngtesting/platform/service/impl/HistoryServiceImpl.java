@@ -65,7 +65,6 @@ public class HistoryServiceImpl extends BaseServiceImpl implements HistoryServic
         return history;
     }
 
-
 	@Override
 	public Map<String, List<TstHistory>> genVosByDate(List<TstHistory> historyPos) {
 		Map<String, List<TstHistory>> map = new LinkedHashMap();
