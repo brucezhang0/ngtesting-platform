@@ -4,11 +4,11 @@ AngularJS, SockJS, SpringBoot, MyBatis, MySQL
 
 Demo: http://47.99.102.138:8080
 
-## Quick start
+## Quick start 1.0-rc
 ### Use Docker
 
 1. Install docker and docker-compose;
-2. Clone the codes and goto project dir;
+2. Run "clone -b branch-1.0.x https://github.com/aaronchen2k/ngtesting-platform.git" and goto project dir;
 3. Enter "docker-compose up" to launch.
 
    (First time, you may get an error caused by MySQL service not ready for web server connectting, just run Step 2 again to fix)
@@ -18,7 +18,7 @@ Demo: http://47.99.102.138:8080
 1. Create dir "/work/ngtesting-data/" for file upload;
 2. Create a MySQL database named "ngtesting-web";
 3. Add MySQL user "ngtesting" with password "P2ssw0rd";
-4. Clone the codes and goto project dir;
+4. Run "clone -b branch-1.0.x https://github.com/aaronchen2k/ngtesting-platform.git" and goto project dir;
 5. Import "src/main/docker/mysql/schema.sql" to database;
 6. In terminal, enter command "xdoc/ngtesting-web-1.0.jar“ to run this executable jar;
 
