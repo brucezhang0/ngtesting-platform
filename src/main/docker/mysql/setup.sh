@@ -25,3 +25,4 @@ echo `service mysql status`
 echo 'mysql容器启动完毕'
 
 tail -f /dev/null
+
