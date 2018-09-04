@@ -8,7 +8,10 @@ service mysql start
 sleep 3
 echo `service mysql status`
 
-if [ -f ~/init ] ; then
+count=`mysql -ungtesting -pP2ssw0rd -e "show databases" | grep ngtesting`
+echo "count=$count"
+
+if [ "$count" != "" ]; then
     echo "数据已初始化，退出"
 else
     echo '2. 开始导入数据....'
