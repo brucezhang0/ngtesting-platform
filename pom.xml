@@ -252,8 +252,8 @@
                     </execution>
 
                     <execution>
-                        <id>push-docker-image</id>
-                        <phase>verify</phase>
+                        <id>gen-mysql-image</id>
+                        <phase>integration-test</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
@@ -265,7 +265,18 @@
                                     <arg value="registry.cn-hangzhou.aliyuncs.com/ngtesting/ngtesting-mysql:${version}" />
                                     <arg value="." />
                                 </exec>
+                            </tasks>
+                        </configuration>
+                    </execution>
 
+                    <execution>
+                        <id>push-docker-image</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
                                 <exec executable="docker">
                                     <arg value="push" />
                                     <arg value="registry.cn-hangzhou.aliyuncs.com/ngtesting/ngtesting-mysql:${version}" />
